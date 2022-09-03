@@ -82,13 +82,15 @@ function SubmitComponent(props) {
         render={({ errors, status, touched }) => (
           <Form>
             <div md="12">
-              <label className="form_text form_label">Maintainer Note</label>
+              <label className="form_text form_label">Charger Note</label>
             </div>
             <div md="12" className="mb-3">
               <Field
-                name={`maintainer_note`}
+                // name={`maintainer_note`}
                 className="form-control in_field"
+                value={props.PostedCar.data[0].charger_note}
                 as="textarea"
+                disabled
               ></Field>
               {/* <ErrorMessage name='birth_date' component={TextError} /> */}
             </div>
